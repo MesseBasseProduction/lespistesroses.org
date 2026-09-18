@@ -67,6 +67,7 @@ nav {
   width: 100%;
 
   img {
+    box-shadow: inherit;
     width: 80%;
   }
 
@@ -184,7 +185,7 @@ main {
 
     a img.proposed-by {
       & {
-        margin-left: var(--s-lg);
+        margin-left: var(--s);
       }
     }
 
