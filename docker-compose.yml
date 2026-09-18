@@ -1,0 +1,10 @@
+services:
+  lespistesroses:
+    container_name: lespistesroses_node
+    build: .
+    command: npm run start
+    restart: always
+    ports:
+      - 8075:8075
+    environment:
+      - NODE_ENV=prod

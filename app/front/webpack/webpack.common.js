@@ -5,7 +5,7 @@ const plugins = require('./plugins');
 
 module.exports = {
   entry: {
-    LeagueCraft: './app/front/js/WebBoilerPlate.js'
+    LPR: './app/front/js/LPR.js'
   },
   module: {
     rules: [

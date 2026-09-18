@@ -1,6 +1,6 @@
-global['url'] = 'webboilerplate'; // Ensure no slash at the end
+global['url'] = 'lespistesroses.org'; // Ensure no slash at the end
 global['version'] = '0.0.1';
-global['port'] = 8000;
+global['port'] = 8075;
 
 console.log(`${(new Date()).toISOString()} | ${global['url']} v${global['version']} | Starting frontend web server`);
 
@@ -27,18 +27,13 @@ app.set('views',  path.resolve(__dirname, './views'));
 const appRoutes = require('./route/AppRoutes');
 app.use('/', appRoutes);
 
+const modalRoutes = require('./route/ModalRoutes');
+app.use('/modal', modalRoutes);
+
 app.use('/assets', express.static(path.join(__dirname, '../assets'), { // Serve static files
   maxAge: '864000000' // 10 days caching for app assets
 }));
 
-/* Handle 404 as last */
-app.all('*', (req, res) => {
-  console.log(`${(new Date()).toISOString()} | ${global['url']} v${global['version']} | 404 ${req.originalUrl} page requested, return 404.handlebars`);
-  res.render('404' , {
-    pageTitle: '',
-    pageDescription: '',
-  });
-});
 // Start server console
 app.listen(port, () => {
   console.log(`${(new Date()).toISOString()} | ${global['url']} v${version} | Server started and listening on port ${port}`);
