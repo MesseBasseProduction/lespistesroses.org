@@ -1,4 +1,4 @@
-FROM node:17-alpine
+FROM node:24-alpine
 
 RUN mkdir /lespistesroses.org
 WORKDIR /lespistesroses.org
