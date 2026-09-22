@@ -27,7 +27,7 @@ class LesPistesRoses {
   }
 
 
- _openModal(modal, closingCallback) {
+  _openModal(modal, closingCallback) {
     // Modal opening/closing animation
     const closeModal = e => {
       if (['overlay', 'close-modal'].indexOf(e.target.id) === -1) {
