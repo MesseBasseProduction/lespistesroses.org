@@ -2,6 +2,7 @@
   /* Theme main colors */
   --c-primary: #fcb1c7;
   --c-primary-dark: #93375e;
+  --c-primary-dark-a50: rgba(147, 55, 94, .2);
 
   --c-glowing-y: #fedaca;
 
@@ -38,6 +39,7 @@ html {
 }
 
 body {
+  background: linear-gradient(180deg, white 0,var(--c-primary) 66%, white 100%);
   font-size: 1.4rem;
 }
 
@@ -59,7 +61,6 @@ img {
 
 nav {
   align-items: center;
-  background: linear-gradient(180deg,white 35%, var(--c-primary) 100%);  display: flex;
   flex-direction: column;
   padding: var(--s-lg);
   padding-bottom: 0;
@@ -78,7 +79,6 @@ nav {
 
 footer {
   align-items: center;
-  background: linear-gradient(180deg,var(--c-primary) 35%, white 100%);  display: flex;
   flex-direction: column;
   padding: var(--s-lg);
   text-align: center;
@@ -98,9 +98,10 @@ footer {
 
 main {
   align-items: center;
-  background: linear-gradient(180deg, var(--c-primary) 0%, var(--c-primary-dark) 66%, var(--c-primary) 100%);
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  max-width: max(66%, 600px);
   text-align: center;
 
   p.description {
@@ -138,7 +139,7 @@ main {
   }
 
   div.animation-card {
-    background: var(--c-bg-a80);
+    background: var(--c-primary-dark-a50);
     border-radius: .5rem;
     margin-bottom: var(--s-lg);
     width: calc(100% - (2 * var(--s-lg)));
@@ -166,6 +167,11 @@ main {
 
     i {
       display: block;
+    }
+
+    ul {
+      padding-bottom: var(--s-lg);
+      text-align: left;
     }
 
     img {
