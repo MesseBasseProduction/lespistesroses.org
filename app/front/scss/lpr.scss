@@ -148,7 +148,7 @@ main {
       padding-bottom: var(--s-lg);
     }
 
-    a + h3 {
+    h3:last-of-type {
       padding-top: var(--s-lg);
     }
 
@@ -196,6 +196,8 @@ main {
     }
 
     hr {
+      border: 0;
+      border-top: solid 1px var(--c-fg-a20);
       margin-top: var(--s-lg);
       margin-bottom: var(--s-lg);
     }
