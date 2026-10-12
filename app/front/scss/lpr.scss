@@ -101,7 +101,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: max(66%, 600px);
+  max-width: max(70%, 700px);
   text-align: center;
 
   p.description {
@@ -279,7 +279,7 @@ main {
     }
 
     div.animation-card {
-      width: max(20%, 600px);
+      width: max(33%, 700px);
     }
   }
 }
